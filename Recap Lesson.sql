@@ -33,3 +33,4 @@ SELECT TOP 5
 FROM airports a
 GROUP BY a.iso_region
 ORDER BY Total_Airports DESC
+
