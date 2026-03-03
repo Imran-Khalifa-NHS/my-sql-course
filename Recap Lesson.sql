@@ -21,9 +21,15 @@ WHERE
     AND
     A.continent = 'EU'
     AND
-    A.iso_country IN ('GB','FR')
-    AND
-    A.latitude_deg BETWEEN '51' AND '54'  --- List
+    A.iso_country IN ('GB','FR') --- List
+    --AND
+    ---A.latitude_deg BETWEEN '51' AND '54'  --- BETWEEN
 
 ORDER BY A.NAME ASC
 
+SELECT TOP 5
+    a.iso_region
+    ,COUNT(*) AS Total_Airports
+FROM airports a
+GROUP BY a.iso_region
+ORDER BY Total_Airports DESC
